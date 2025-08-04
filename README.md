@@ -38,3 +38,18 @@ Perfect for:
 ```bash
 git clone https://github.com/your-username/qr-doc-share.git
 cd qr-doc-share
+
+```bash
+pip install -r requirements.txt
+
+### 2. Add your documents
+
+Put all files you want to share in the documents/ folder.
+
+### Run the app
+```bash
+python app.py
+
+### Access the app
+On your computer: http://localhost:5000
+On your iPad: http://<your-computer-local-IP>:5000 (e.g. http://192.168.1.10:5000)
