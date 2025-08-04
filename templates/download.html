@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Download via QR</title>
+</head>
+<body>
+    <h2>Scan QR to Download</h2>
+    <p>{{ filename }}</p>
+    <img src="{{ qr_image }}" alt="QR Code">
+    <br>
+    <a href="{{ url_for('download_file', filename=filename) }}">Download directly</a>
+</body>
+</html>

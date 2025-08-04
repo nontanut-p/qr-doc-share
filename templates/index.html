@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Search</title>
+</head>
+<body>
+    <h2>Search Document</h2>
+    <form method="get">
+        <input type="text" name="q" placeholder="Search..." value="{{ query }}">
+        <button type="submit">Search</button>
+    </form>
+
+    <h3>Results:</h3>
+    <ul>
+        {% for file in files %}
+            <li>
+                {{ file }}
+                <a href="{{ url_for('generate_qr', filename=file) }}">[QR]</a>
+                <a href="{{ url_for('download_file', filename=file) }}">[Download]</a>
+            </li>
+        {% else %}
+            <p>No files found.</p>
+        {% endfor %}
+    </ul>
+</body>
+</html>
